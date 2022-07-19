@@ -1,0 +1,51 @@
+::ng-deep .g1{
+    flex-grow: 1;
+    text-align: center;
+}
+
+::ng-deep .g5{
+    flex-grow: 5;
+}
+
+::ng-deep .pesquisa{
+    width: 80%;
+    margin:0 auto;
+    display: flex;
+}
+
+::ng-deep .alboom{
+    justify-content: center;
+    display: flex;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+::ng-deep .foto{
+    text-align: center;
+    min-width: 280px;
+    max-width: 400px;
+    flex: 1 1 auto;
+    height: 300px;
+}
+
+::ng-deep .foto img{
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+    background-image: url('/assets/teste.jpg');
+}
+
+::ng-deep .addFoto{
+    width: 70%;
+    margin:20px auto;
+    border: 1px solid #d3d3d3;
+}
+
+::ng-deep .addButton{
+    float: right;
+    margin: 20px 0;
+}
+
+::ng-deep .clear{
+    clear: both;
+}

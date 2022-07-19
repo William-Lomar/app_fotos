@@ -1,0 +1,57 @@
+<div class="pesquisa">
+    <div class="g5">
+        <dx-form [formData]="pesquisa">
+            <dxi-item dataField="procurar"></dxi-item>
+        </dx-form>
+    </div>
+    <div class="g1">
+        <dx-button
+        stylingMode="contained"
+        text="Pesquisar"
+        type="normal"
+        [style]=""
+        [width]="120"
+        (onClick)="pesquisarFoto($event)"
+        ></dx-button>
+    </div>
+</div>
+
+<div class="addFoto">
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            <dx-file-uploader
+            [multiple]="true"
+            selectButtonText="Selecionar Fotos"
+            labelText=""
+            accept="image/*"
+            uploadMode="useForm"
+          >
+          </dx-file-uploader>
+        </form>
+    </div>
+    <div class="addButton">
+        <dx-button
+        stylingMode="contained"
+        text="Adicionar fotos"
+        type="success"
+        ></dx-button>
+    </div>
+</div>
+<div class="clear"></div>
+
+<div class="alboom">
+
+    <div class="foto">
+        <img src="assets/teste.jpg">
+        <dx-button
+        stylingMode="contained"
+        text="Excluir"
+        type="danger"
+        [style]=""
+        [width]="120"
+        ></dx-button>
+    </div>
+
+
+
+</div>
