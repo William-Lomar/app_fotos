@@ -11,7 +11,7 @@
         type="normal"
         [style]=""
         [width]="120"
-        (onClick)="pesquisarFoto($event)"
+        (onClick)="pesquisarFoto()"
         ></dx-button>
     </div>
 </div>
@@ -20,6 +20,7 @@
     <div>
         <form method="post" enctype="multipart/form-data">
             <dx-file-uploader
+            #upload
             [multiple]="true"
             selectButtonText="Selecionar Fotos"
             labelText=""
@@ -34,24 +35,35 @@
         stylingMode="contained"
         text="Adicionar fotos"
         type="success"
+        (onClick)="addFotos()"
+        ></dx-button>
+        <dx-button
+        stylingMode="contained"
+        text="Resetar fotos"
+        type="normal"
+        (onClick)="resetarUpload()"
+        ></dx-button>
+        <dx-button
+        stylingMode="contained"
+        text="download das fotos"
+        type="normal"
+        (onClick)="download()"
         ></dx-button>
     </div>
 </div>
 <div class="clear"></div>
 
 <div class="alboom">
-
-    <div class="foto">
-        <img src="assets/teste.jpg">
+    <div *ngFor="let img of imgs" class="foto">
+        <img [src]="'http://localhost:3080/'+img">
+        <p>{{img}}</p>
         <dx-button
         stylingMode="contained"
         text="Excluir"
         type="danger"
         [style]=""
         [width]="120"
+        (onClick)="excluirFoto(img)"
         ></dx-button>
     </div>
-
-
-
 </div>

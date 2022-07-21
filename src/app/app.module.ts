@@ -1,7 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { DxButtonModule, DxFileUploaderModule, DxFormModule, DxMenuModule } from 'devextreme-angular';
-import { DxoUploadModule } from 'devextreme-angular/ui/nested';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ErroComponent } from './core/erro/erro.component';
@@ -13,7 +13,7 @@ import { HomeComponent } from './core/home/home.component';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    ErroComponent
+    ErroComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +21,8 @@ import { HomeComponent } from './core/home/home.component';
     DxMenuModule,
     DxFormModule,
     DxButtonModule,
-    DxFileUploaderModule
+    DxFileUploaderModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
