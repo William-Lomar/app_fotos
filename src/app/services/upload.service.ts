@@ -30,4 +30,8 @@ export class UploadService{
       return this.http.delete('http://localhost:3080/deletarImg/'+img);
     }
 
+    downloadImg(img:string){
+      return this.http.get('http://localhost:3080/download/'+img,{responseType:'blob'});
+    }
+
 }

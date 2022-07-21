@@ -69,8 +69,23 @@ export class HomeComponent implements OnInit{
         this.uploadForm.instance.reset();
     }
 
-    download(){//Falta fazer
-    console.log("Download!")
+    download(img:string){//Falta fazer
+      this.upload.downloadImg(img).subscribe({
+        next:(results)=>{
+          let url = window.URL.createObjectURL(results);
+          let a = document.createElement('a');
+          a.href = url;
+          a.download = img;
+          a.click();
+          window.URL.revokeObjectURL(url);
+          a.remove();
+        },error:(erro)=>{
+
+        }
+      })
+
+
+      console.log("Download!")
     }
 
     excluirFoto(img:string){

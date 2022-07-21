@@ -43,12 +43,7 @@
         type="normal"
         (onClick)="resetarUpload()"
         ></dx-button>
-        <dx-button
-        stylingMode="contained"
-        text="download das fotos"
-        type="normal"
-        (onClick)="download()"
-        ></dx-button>
+
     </div>
 </div>
 <div class="clear"></div>
@@ -64,6 +59,12 @@
         [style]=""
         [width]="120"
         (onClick)="excluirFoto(img)"
+        ></dx-button>
+        <dx-button
+        stylingMode="contained"
+        text="Download"
+        type="normal"
+        (onClick)="download(img)"
         ></dx-button>
     </div>
 </div>
